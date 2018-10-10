@@ -7,26 +7,30 @@ package rok2zad1;
 
 /**
  *
- * @author Lukasz
+ * @author Sensei
  */
 public abstract class Osoba {
+    
+    private String imie;
+    private String nazwisko;
+    private int wiek;
+    
+    
+    public Osoba(String imie, String nazwisko, int wiek)
+    {
+        this.imie=imie;
+        this.nazwisko=nazwisko;
+        this.wiek=wiek;
+    }
+    
+    
+    public abstract void Mow();
 
-     private String imie;
-     private String naziwsko;
-     private int wiek;
+    
+    public String PokazDane() {
+        return "{" + "imie=" + imie + ", nazwisko=" + nazwisko + ", wiek=" + wiek + '}';
+    }
+   
      
-    
-    public static void main(String[] args) {
-        
-    }
-
-    public Osoba(String imie, String naziwsko, int wiek) {
-        this.imie = imie;
-        this.naziwsko = naziwsko;
-        this.wiek = wiek;
-    }
-  abstract public void PokazDane();
-    
-
-  abstract public void Mow();
+   
 }

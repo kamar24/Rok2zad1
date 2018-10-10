@@ -7,17 +7,25 @@ package rok2zad1;
 
 /**
  *
- * @author Lukasz
+ * @author Sensei
  */
-public abstract class Pracownik extends Osoba {
-    private String zawod;
+public abstract class Pracownik extends Osoba{
+    
+     private String zawod;
 
-        public Pracownik(String zawod, String imie, String naziwsko, int wiek) {
-        super(imie, naziwsko, wiek);
-        this.zawod = zawod;
-    }
-
-   
+    public Pracownik(String imie, String nazwisko, int wiek, String zawod) {
+        super(imie, nazwisko, wiek);
+        this.zawod=zawod;
     }
     
+     
+     
+     public abstract void WykonajPrace();
 
+    @Override
+    public String PokazDane() {
+        return "{" + "zawod=" + zawod + '}' + super.PokazDane();
+    }
+     
+     
+}

@@ -7,15 +7,34 @@ package rok2zad1;
 
 /**
  *
- * @author Lukasz
+ * @author Sensei
  */
-public class Piekarz extends Pracownik {
-    
-    public Piekarz(String zawod, String imie, String naziwsko, int wiek) {
-        super(zawod, imie, naziwsko, wiek);
+public class Piekarz extends Pracownik{
+
+    public Piekarz(String imie, String nazwisko, int wiek) {
+        super(imie, nazwisko, wiek, "Piekarz");
     }
-    
-    
-    }
+
+   
     
 
+    @Override
+    public void WykonajPrace() {
+        System.out.println("Pieku pieku pieku");
+    }
+
+    @Override
+    public void Mow() {
+        System.out.println("Z tej mąki chleba nie będzie");
+    }
+    
+    
+    public String PokazDane()
+    {
+        WykonajPrace();
+        Mow();
+        return super.PokazDane();
+        
+    }
+    
+}

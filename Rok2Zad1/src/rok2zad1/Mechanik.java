@@ -7,15 +7,33 @@ package rok2zad1;
 
 /**
  *
- * @author Lukasz
+ * @author Sensei
  */
 public class Mechanik extends Pracownik{
-    
-    public Mechanik(String zawod, String imie, String naziwsko, int wiek) {
-        super(zawod, imie, naziwsko, wiek);
+
+    public Mechanik(String imie, String nazwisko, int wiek) {
+        super(imie, nazwisko, wiek, "Mechanik");
     }
-    
+
    
-    }
     
 
+    @Override
+    public void WykonajPrace() {
+        System.out.println("Grzebu grzebu grzebu");
+    }
+
+    @Override
+    public void Mow() {
+        System.out.println("To chyba uszczelka pod głowicą");
+    }
+    
+    public String PokazDane()
+    {
+        WykonajPrace();
+        Mow();
+        return super.PokazDane();
+        
+    }
+    
+}

@@ -7,7 +7,7 @@ package rok2zad1;
 
 /**
  *
- * @author Sensei
+ * @author lkusta
  */
 public class Piekarz extends Pracownik{
 

@@ -7,7 +7,7 @@ package rok2zad1;
 
 /**
  *
- * @author Lukasz
+ * @author lkusta
  */
 public class Murarz extends Pracownik{
 
